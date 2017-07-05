@@ -9,14 +9,14 @@ require __DIR__ . '/twilio/Twilio/autoload.php';
 use Twilio\Rest\Client;
 
 // Your Account SID and Auth Token from twilio.com/console
-$sid = 'AC4cc608f9d73c16836871b800d2c9b057';
-$token = '9885b048fcec181e1a061711f794a7cf';
+$sid = 'AC520af7047a201c5de086b2f915f37042';
+$token = 'f755cfbe3d61fa85b078cac2f5da031e';
 $client = new Client($sid, $token);
 
 $sms = $client->messages->create(
-    "+14108675309",
+    "+918894685455",
     array(
-        "from" => "+15005550006",
+        "from" => "+1805-409-0629",
         "body" => "All in the game, yo"
     )
 );
