@@ -1,5 +1,5 @@
 <?php
-echo "hi";
+
 // Require the bundled autoload file - the path may need to change
 // based on where you downloaded and unzipped the SDK
 require __DIR__ . '/twilio/Twilio/autoload.php';
@@ -13,7 +13,7 @@ $token = '9885b048fcec181e1a061711f794a7cf';
 $client = new Client($sid, $token);
 
 // Use the client to do fun stuff like send text messages!
-$client->messages->create(
+$send = $client->messages->create(
     // the number you'd like to send the message to
     '+918894685455',
     array(
@@ -23,3 +23,10 @@ $client->messages->create(
         'body' => "Hey Jenny! Good luck on the bar exam!"
     )
 );
+if($send){
+
+  echo "msg sent";
+
+}else{
+  echo "msg not sent";
+}
