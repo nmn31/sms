@@ -1,4 +1,5 @@
 <?php
+echo "hi";
 // Require the bundled autoload file - the path may need to change
 // based on where you downloaded and unzipped the SDK
 require __DIR__ . '/twilio/Twilio/autoload.php';
