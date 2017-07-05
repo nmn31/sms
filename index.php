@@ -13,14 +13,12 @@ $sid = 'AC4cc608f9d73c16836871b800d2c9b057';
 $token = '9885b048fcec181e1a061711f794a7cf';
 $client = new Client($sid, $token);
 
-// Use the client to do fun stuff like send text messages!
-$client->messages->create(
-    // the number you'd like to send the message to
-    '+918894685455',
+$sms = $client->messages->create(
+    "+14108675309",
     array(
-        // A Twilio phone number you purchased at twilio.com/console
-        'from' => '+1805-409-0629',
-        // the body of the text message you'd like to send
-        'body' => "Hey Jenny! Good luck on the bar exam!"
+        "from" => "+15005550006",
+        "body" => "All in the game, yo"
     )
 );
+
+echo $sms->sid;
