@@ -18,7 +18,7 @@ $call = $client->calls->create(
 );
 
 echo "<pre>";
-print_r($sms);
+print_r($call);
 exit;
 $sms = $client->messages->create(
     "+919478633848",        //+919478633848   9478144262
