@@ -12,12 +12,14 @@ use Twilio\Rest\Client;
 $sid = 'AC520af7047a201c5de086b2f915f37042';
 $token = 'f755cfbe3d61fa85b078cac2f5da031e';
 $client = new Client($sid, $token);
-/*$call = $client->calls->create(
+$call = $client->calls->create(
     "+1805-409-0629", "+918894685455",
     array("url" => "http://demo.twilio.com/docs/voice.xml")
 );
 
-echo $call->sid;*/
+echo "<pre>";
+print_r($sms);
+exit;
 $sms = $client->messages->create(
     "+919478633848",        //+919478633848   9478144262
     array(
